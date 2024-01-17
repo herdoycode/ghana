@@ -34,12 +34,13 @@
       nav {
         @media screen and (max-width: 768px) {
           position: absolute;
-          top: 12rem;
-          width: 100%;
+          top: 14rem;
+          width: 100vw;
           transform: translateX(-100%);
           transition: 0.5s ease;
+          background: var(--bg-primary);
           &.active {
-            transform: translateX(0);
+            transform: translateX(0rem);
           }
           ul {
             flex-direction: column;
