@@ -1,0 +1,41 @@
+.topbar-wrapper {
+  background: var(--primary-color);
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      .item {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        gap: 0.5rem;
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+        .text {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .item {
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        &:hover {
+          background: var(--primary-alt);
+        }
+      }
+    }
+  }
+}
