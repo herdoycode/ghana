@@ -1,0 +1,27 @@
+.awssld {
+  overflow: hidden;
+  height: 45rem;
+  .item {
+    object-fit: cover;
+  }
+}
+
+.awssld__controls__arrow-left {
+  overflow: hidden;
+  position: absolute;
+  left: 2rem;
+  color: red;
+  @media screen and (max-width: 768px) {
+    display: block;
+    left: 1rem;
+  }
+}
+.awssld__controls__arrow-right {
+  overflow: hidden;
+  position: absolute;
+  right: 2rem;
+  @media screen and (max-width: 768px) {
+    display: block;
+    right: 1rem;
+  }
+}
