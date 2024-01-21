@@ -1,18 +1,11 @@
-"use client";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
-import "./page.scss";
+import Slider from "./components/slider/Slider";
 
-const Home = () => {
+const page = () => {
   return (
-    <div className="container">
-      <AwesomeSlider>
-        <div className="item" data-src="/1.jpg" />
-        <div className="item" data-src="/1.jpg" />
-        <div className="item" data-src="/1.jpg" />
-      </AwesomeSlider>
+    <div>
+      <Slider />
     </div>
   );
 };
 
-export default Home;
+export default page;
