@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaHeart, FaInstagram } from "react-icons/fa";
+import { FaHeart, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
+import { MdMail } from "react-icons/md";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -30,17 +31,26 @@ const Footer = () => {
               </ul>
             </div>
             <div className="f-top-i">
-              <h3>Quick Links</h3>
+              <h3>Contact</h3>
               <ul className="quick-links">
-                <li>
-                  <Link href="/">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/">Contact Us</Link>
-                </li>
-                <li>
-                  <Link href="/">Gallery</Link>
-                </li>
+                <div
+                  className="item"
+                  style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+                >
+                  <div className="icon">
+                    <FaPhoneAlt />
+                  </div>
+                  <p className="text">(743)20213-4065</p>
+                </div>
+                <div
+                  className="item"
+                  style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+                >
+                  <div className="icon">
+                    <MdMail />
+                  </div>
+                  <p className="text">bridgeinthegap23@gmail.com</p>
+                </div>
               </ul>
             </div>
             <div className="f-top-i">
