@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaHeart } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.scss";
+import DonateBtn from "../donateBtn/DonateBtn";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -25,6 +25,9 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </div>
               <div className="item">
+                <Link href="/">About</Link>
+              </div>
+              <div className="item">
                 <Link href="/gallery">Gallery</Link>
               </div>
               <div className="item">
@@ -36,12 +39,7 @@ const Navbar = () => {
             <div className="item">
               <Link href="/login">Login</Link>
             </div>
-            <div className="donate-btn">
-              <span>Donate now</span>
-              <div className="icon">
-                <FaHeart />
-              </div>
-            </div>
+            <DonateBtn />
           </div>
         </div>
       </div>

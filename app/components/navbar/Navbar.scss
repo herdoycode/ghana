@@ -41,40 +41,6 @@
       display: flex;
       align-items: center;
       gap: 2rem;
-      .donate-btn {
-        display: flex;
-        align-items: center;
-        background: var(--primary-color);
-        gap: 1rem;
-        border-radius: 3rem;
-        padding-left: 1rem;
-        border: 2px solid var(--primary-color);
-        color: #fff;
-        cursor: pointer;
-        &:hover {
-          background: #fff;
-          color: var(--primary-color);
-          transition: 0.4s ease;
-          &:hover .icon {
-            background: var(--primary-color);
-            color: #fff;
-            transition: 0.4s ease;
-          }
-        }
-        .icon {
-          display: flex;
-          align-items: center;
-          width: 4rem;
-          height: 4rem;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #fff;
-          color: var(--primary-color);
-          font-size: 2rem;
-        }
-      }
     }
   }
 }

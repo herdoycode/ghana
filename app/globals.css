@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
-  --primary-color: #0089a5;
-  --primary-alt: #00809a;
+  --primary-color: #6c00d1;
+  --primary-alt: #500085;
   --bg-primary: #f1f5ff;
   --bg-secondary: #d4dee6;
   --text-color: #273038;
@@ -10,7 +10,7 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #007a92;
+  --primary-color: #6c00d1;
   --bg-primary: #0d121f;
   --bg-secondary: #1e2636;
   --text-color: #8e99a3;
