@@ -6,7 +6,7 @@ const Goal = () => {
       <div className="container">
         <div className="goal">
           <div className="g-left">
-            <img src="/goal.jpg" alt="education image" />
+            <img src="/goal2.jpg" alt="education image" />
           </div>
           <div className="g-right">
             <h2>Our goal is to help people</h2>
