@@ -1,0 +1,99 @@
+.tastimonial-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .tt-top {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 5rem;
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      @media screen and (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  padding: 5rem 1rem;
+  .testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 3rem;
+    .testimonial {
+      max-width: 60rem;
+      padding: 3rem;
+      gap: 2rem;
+      background: #fff;
+      border-radius: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 768px) {
+        padding: 1rem;
+      }
+      .t-img {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          border: 5px solid var(--primary-color);
+          border-radius: 50%;
+        }
+      }
+      .t-content {
+        flex: 3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        .q-t {
+          font-size: 6rem;
+          color: #e2e2e2;
+          padding: 0;
+          height: 6rem;
+          overflow: hidden;
+          @media screen and (max-width: 768px) {
+            font-size: 4rem;
+            margin-bottom: -2rem;
+          }
+        }
+        .q-b {
+          display: flex;
+          justify-content: flex-end;
+          font-size: 6rem;
+          color: #e2e2e2;
+          height: 5rem;
+          overflow: hidden;
+          margin-top: -2rem;
+          @media screen and (max-width: 768px) {
+            font-size: 4rem;
+          }
+        }
+        p {
+          padding: 0rem 2rem;
+          @media screen and (max-width: 768px) {
+            padding: 0rem 1rem;
+          }
+        }
+      }
+      .t-user {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          padding: 0;
+          font-size: 1.2rem !important;
+        }
+      }
+    }
+  }
+}

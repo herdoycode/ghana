@@ -2,6 +2,7 @@ import Goal from "./components/goal/Goal";
 import Help from "./components/help/Help";
 import ProfileCard from "./components/profileCard/ProfileCard";
 import Slider from "./components/slider/Slider";
+import Tastimonial from "./components/testimonial/Tastimonial";
 import Video from "./components/video/Video";
 import "./page.scss";
 
@@ -25,6 +26,8 @@ const page = () => {
         <h2>Our Main Donors</h2>
         <ProfileCard />
       </div>
+
+      <Tastimonial />
 
       <Video />
 
