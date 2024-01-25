@@ -1,4 +1,5 @@
 import Goal from "./components/goal/Goal";
+import Help from "./components/help/Help";
 import ProfileCard from "./components/profileCard/ProfileCard";
 import Slider from "./components/slider/Slider";
 import Video from "./components/video/Video";
@@ -17,6 +18,9 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      <Help />
+
       <div className="donor">
         <h2>Our Main Donors</h2>
         <ProfileCard />
