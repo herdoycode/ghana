@@ -54,3 +54,42 @@
     text-align: center;
   }
 }
+
+.need-wrapper {
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .need {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .n-left {
+      flex: 1;
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 4rem;
+          text-align: center;
+        }
+      }
+    }
+    .n-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

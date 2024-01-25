@@ -1,7 +1,8 @@
-import "./page.scss";
+import Goal from "./components/goal/Goal";
 import ProfileCard from "./components/profileCard/ProfileCard";
 import Slider from "./components/slider/Slider";
-import Goal from "./components/goal/Goal";
+import Video from "./components/video/Video";
+import "./page.scss";
 
 const page = () => {
   return (
@@ -19,6 +20,24 @@ const page = () => {
       <div className="donor">
         <h2>Our Main Donors</h2>
         <ProfileCard />
+      </div>
+
+      <Video />
+
+      <div className="need-wrapper">
+        <div className="container">
+          <div className="need">
+            <div className="n-left">
+              <div className="content">
+                <p>Worldwide non-profit charity</p>
+                <h2>Deserving people for needy People</h2>
+              </div>
+            </div>
+            <div className="n-right">
+              <img src="/shape-4.png" alt="Shape" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
