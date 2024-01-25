@@ -55,12 +55,17 @@ const Footer = () => {
             </div>
             <div className="f-top-i">
               <h3>Raise Money and help them.</h3>
-              <div className="f-donate-btn">
-                <span>Donate now</span>
-                <div className="icon">
-                  <FaHeart />
+              <Link
+                href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f"
+                target="blank"
+              >
+                <div className="f-donate-btn">
+                  <span>Donate now</span>
+                  <div className="icon">
+                    <FaHeart />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
