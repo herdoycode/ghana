@@ -1,19 +1,23 @@
 .about-wrapper {
-  padding: 8rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   .ab-top {
-    text-align: center;
-    width: 70rem;
-    padding: 1rem 8rem;
+    padding: 10rem 8rem;
     margin-bottom: 10rem;
+    background: var(--bg-secondary);
     h1 {
       font-size: 5rem;
       margin-bottom: 3rem;
+      text-align: center;
+    }
+    p {
+      margin-top: 2rem;
+      font-size: 2rem;
     }
     @media screen and (max-width: 768px) {
+      padding: 10rem 2rem;
       width: 100%;
       h1 {
         font-size: 3rem;

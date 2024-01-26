@@ -9,6 +9,45 @@ const ProfileCard = () => {
       <div className="card-wrapper">
         <div className="card">
           <div className="card-image">
+            <img src="/44.jpg" alt="profile one" />
+          </div>
+
+          <ul className="social-icons">
+            <li>
+              <Link href="">
+                <i className="fab fa-facebook-f">
+                  <FaFacebookF />
+                </i>
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <i className="fab fa-instagram">
+                  <FaInstagram />
+                </i>
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <i className="fab fa-twitter">
+                  <CiLinkedin />
+                </i>
+              </Link>
+            </li>
+          </ul>
+
+          <div className="details">
+            <h2>
+              Wegmans, Chapel Hill
+              <br />
+              <span className="job-title">Donor</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className="card-wrapper">
+        <div className="card">
+          <div className="card-image">
             <img src="/22.jpg" alt="profile one" />
           </div>
 
