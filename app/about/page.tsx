@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MdCheckCircle } from "react-icons/md";
 import Slider from "../components/slider/Slider";
 import Tastimonial from "../components/testimonial/Tastimonial";
@@ -18,12 +19,16 @@ const AboutPage = () => {
           <div className="ab-left">
             <Slider />
             <div className="ab-lb">
-              <button>
-                <MdCheckCircle /> Donate to Underprivileged
-              </button>
-              <button>
-                <MdCheckCircle /> Donate for Education
-              </button>
+              <Link href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f">
+                <button>
+                  <MdCheckCircle /> Donate to Underprivileged
+                </button>
+              </Link>
+              <Link href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f">
+                <button>
+                  <MdCheckCircle /> Donate for Education
+                </button>
+              </Link>
             </div>
           </div>
           <div className="ab-rigtht">
