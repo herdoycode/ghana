@@ -40,9 +40,9 @@ const AboutPage = () => {
           be cancelled. They wanted to ensure that no student misses out on
           enriching field trips due to financial constraints. Through community
           support and donors, they were able to establish a fund that covers the
-          expenses for students who can't afford these educational experiences.
-          This endeavor aims to create equal opportunities for all, fostering a
-          sense of inclusivity and shared learning.
+          expenses for students who can&apos;t afford these educational
+          experiences. This endeavor aims to create equal opportunities for all,
+          fostering a sense of inclusivity and shared learning.
         </p>
         <p>
           After many months of hard work, Brianca Adams and Bright Kavi began
@@ -56,19 +56,19 @@ const AboutPage = () => {
           They launched new projects, such as tutoring programs and mentorship
           initiatives, to provide students with the resources they needed to
           succeed. Bridge in the Gap Worldwide was created to address gaps in
-          children's education, driven by a belief that every child deserves
-          quality learning opportunities. Motivated by a deep concern for the
-          well-being of underprivileged children, they initiated a nonprofit
-          focused primarily on aiding economically disadvantaged kids in
-          accessing education. Recognizing the transformative power of education
-          and witnessing disparities firsthand, they sought to break the cycle
-          of poverty and offer children a chance for a brighter future. Our
-          overall goal to make a positive impact by providing resources and
-          support for their educational journey.
+          children&apos;s education, driven by a belief that every child
+          deserves quality learning opportunities. Motivated by a deep concern
+          for the well-being of underprivileged children, they initiated a
+          nonprofit focused primarily on aiding economically disadvantaged kids
+          in accessing education. Recognizing the transformative power of
+          education and witnessing disparities firsthand, they sought to break
+          the cycle of poverty and offer children a chance for a brighter
+          future. Our overall goal to make a positive impact by providing
+          resources and support for their educational journey.
         </p>
         <p>
-          "When u agree on a common idea and work towards it together, you can
-          create something special" Brianca and Bright
+          &lsquo;When u agree on a common idea and work towards it together, you
+          can create something special&lsquo; Brianca and Bright
         </p>
       </div>
       <div className="container">
