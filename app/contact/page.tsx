@@ -1,7 +1,64 @@
-import React from "react";
+import { FaPhone } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { IoLocation } from "react-icons/io5";
+import ContactForm from "./ContactForm";
+import "./page.scss";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <div className="contact-page">
+      <div className="container">
+        <div className="contact-info">
+          <div className="c-top">
+            <h2>Contact Us</h2>
+            <p>Charity activities are taken place around the world.</p>
+          </div>
+          <div className="contact-items">
+            <div className="c-item">
+              <div className="icon">
+                <IoMdMail />
+              </div>
+              <h3>Email Address</h3>
+              <p>bridgeinthegap23@gmail.com</p>
+            </div>
+            <div className="c-item">
+              <div className="icon">
+                <IoLocation />
+              </div>
+              <h3>Location</h3>
+              <p>Winston Salem, North Carolina.</p>
+            </div>
+            <div className="c-item">
+              <div className="icon">
+                <FaPhone />
+              </div>
+              <h3>Phone</h3>
+              <p>(743) 213-4065</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="contact-form">
+        <div className="container">
+          <div className="c-form">
+            <div className="left">
+              <h2>We&apos;d Love to hear from you</h2>
+              <p>
+                We are thrilled that you&apos;re interested in connecting with
+                Bridge In The Gap. Whether you have a question, want to learn
+                more about our programs, or simply want to join hands in making
+                a difference, we are here to listen and engage. Feel free to
+                reach out to us using any of the following methods:
+              </p>
+            </div>
+            <div className="right">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ContactPage;

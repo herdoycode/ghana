@@ -20,13 +20,13 @@ const Footer = () => {
               <h3>Quick Links</h3>
               <ul className="quick-links">
                 <li>
-                  <Link href="/">About Us</Link>
+                  <Link href="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link href="/">Contact Us</Link>
+                  <Link href="/contact">Contact Us</Link>
                 </li>
                 <li>
-                  <Link href="/">Gallery</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
               </ul>
             </div>
