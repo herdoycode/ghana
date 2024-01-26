@@ -40,7 +40,7 @@ const Footer = () => {
                   <div className="icon">
                     <FaPhoneAlt />
                   </div>
-                  <p className="text">(743)20213-4065</p>
+                  <p className="text">743-213-4065</p>
                 </div>
                 <div
                   className="item"
@@ -54,13 +54,12 @@ const Footer = () => {
               </ul>
             </div>
             <div className="f-top-i">
-              <h3>Just raise money take out help me.</h3>
               <Link
                 href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f"
                 target="blank"
               >
                 <div className="f-donate-btn">
-                  <span>Donate now</span>
+                  <span>Donate Now</span>
                   <div className="icon">
                     <FaHeart />
                   </div>

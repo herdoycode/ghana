@@ -23,7 +23,7 @@ const Help = () => {
               </div>
               <h3>Kids Education</h3>
               <p>
-                we believe in the power of education to transform lives and
+                We believe in the power of education to transform lives and
                 create a brighter future for all children.
               </p>
             </div>
