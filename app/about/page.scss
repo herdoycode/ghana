@@ -1,0 +1,73 @@
+.about-wrapper {
+  padding: 8rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .ab-top {
+    text-align: center;
+    width: 70rem;
+    padding: 1rem 8rem;
+    margin-bottom: 10rem;
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  .ab-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .ab-left {
+      .ab-lb {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 0rem;
+        gap: 4rem;
+        @media screen and (max-width: 768px) {
+          gap: 2rem;
+        }
+        button {
+          padding: 1.5rem;
+          background: var(--primary-color);
+          color: #fff;
+          border-radius: 0rem;
+          width: 100%;
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          @media screen and (max-width: 768px) {
+            font-size: 1.5rem;
+            padding: 2rem 0rem;
+          }
+        }
+      }
+    }
+    .ab-rigtht {
+      padding: 2rem;
+      flex: 1;
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+      }
+      p {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 5rem;
+    }
+  }
+}

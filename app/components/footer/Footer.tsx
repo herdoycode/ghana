@@ -54,7 +54,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="f-top-i">
-              <h3>Raise Money and help them.</h3>
+              <h3>Just raise money take out help me.</h3>
               <Link
                 href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f"
                 target="blank"

@@ -1,4 +1,5 @@
 import { MdOutlineCastForEducation } from "react-icons/md";
+import { FaBowlFood } from "react-icons/fa6";
 import { FaUserGraduate } from "react-icons/fa6";
 import "./Help.scss";
 
@@ -38,12 +39,13 @@ const Help = () => {
             </div>
             <div className="h-item">
               <div className="icon">
-                <MdOutlineCastForEducation />
+                <FaBowlFood />
               </div>
-              <h3>Kids Education</h3>
+              <h3>Food Security</h3>
               <p>
-                we believe in the power of education to transform lives and
-                create a brighter future for all children.
+                We are committed to promoting food security and addressing the
+                underlying issues that contribute to it through our Harvest Hope
+                Initiative.
               </p>
             </div>
           </div>
