@@ -21,7 +21,10 @@ const ContactPage = () => {
             }}
           >
             <h2>Contact Us</h2>
-            <p>Raising the foundation of many generations through Education</p>
+            <p>
+              Through education, we empower not just individuals, but entire
+              generations.
+            </p>
             <div
               style={{
                 width: "155px",

@@ -21,7 +21,7 @@ const GalleryPage = ({ children }: Props) => {
     <div className="gallery-wrapper">
       <div className="g-top">
         <h1>Gallery</h1>
-        <p>Charity activities are taken place around the world.</p>
+        <p>Charity activities are taking place around the world.</p>
       </div>
       <div className="projects">
         {projectsLink.map((p) => (
