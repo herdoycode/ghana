@@ -36,8 +36,10 @@ const page = () => {
           <div className="need">
             <div className="n-left">
               <div className="content">
-                <p>Worldwide non-profit charity</p>
-                <h2>Deserving people for needy People</h2>
+                <h2>
+                  Congratulations on claiming your nonprofit&apos;s Candid
+                  profile!
+                </h2>
               </div>
             </div>
             <div className="n-right">
