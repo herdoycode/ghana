@@ -1,8 +1,16 @@
-import prisma from "@/prisma/client";
+"use client";
+import { Message } from "@prisma/client";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./page.scss";
 
-const Messages = async () => {
-  const messages = await prisma.message.findMany();
+const Messages = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  useEffect(() => {
+    axios.get("/api/messages").then((res) => setMessages(res.data));
+  }, []);
+
   return (
     <div className="admin">
       <table>
