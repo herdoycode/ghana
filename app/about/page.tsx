@@ -89,7 +89,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="ab-rigtht">
-            <h2>We believe we can have save lives.</h2>
+            <h2>We believe we can touch many lives.</h2>
             <p>
               At Bridge in the Gap, we recognize the immense value that
               education holds as a transformative force, capable of shaping
