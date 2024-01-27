@@ -16,9 +16,11 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar">
           <div className="left">
-            <div className="logo">
-              <Image width={50} height={50} src="/logo.png" alt="logo" />
-            </div>
+            <Link href="/">
+              <div className="logo">
+                <Image width={50} height={50} src="/logo.png" alt="logo" />
+              </div>
+            </Link>
             <div onClick={() => setNavActive(!navActive)} className="toggler">
               {navActive ? <MdClose /> : <RxHamburgerMenu />}
             </div>
