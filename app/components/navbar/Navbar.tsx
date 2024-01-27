@@ -41,7 +41,7 @@ const Navbar = () => {
             {status === "authenticated" && (
               <>
                 <div className="item">
-                  <Link href="/login">Dashboard</Link>
+                  <Link href="/admin">Dashboard</Link>
                 </div>
                 <div
                   onClick={() => signOut({ callbackUrl: "/" })}
