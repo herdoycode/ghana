@@ -3,15 +3,32 @@ import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import ContactForm from "./ContactForm";
 import "./page.scss";
+import DonateBtn from "../components/donateBtn/DonateBtn";
 
 const ContactPage = () => {
   return (
     <div className="contact-page">
       <div className="container">
         <div className="contact-info">
-          <div className="c-top">
+          <div
+            className="c-top"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              gap: "2rem",
+            }}
+          >
             <h2>Contact Us</h2>
-            <p>Charity activities are taken place around the world.</p>
+            <p>Raising the foundation of many generations through Education</p>
+            <div
+              style={{
+                width: "155px",
+              }}
+            >
+              <DonateBtn />
+            </div>
           </div>
           <div className="contact-items">
             <div className="c-item">
