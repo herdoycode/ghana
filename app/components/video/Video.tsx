@@ -5,9 +5,9 @@ const Video = () => {
       <div className="container">
         <div className="video">
           <h2>Watch Now</h2>
-          <video autoPlay controls width="100%">
+          <video controls width="100%">
             <source
-              src="https://bridgeinthegap.org/wp-content/uploads/2023/08/WhatsApp-Video-2023-08-22-at-5.18.18-AM.mp4"
+              src="https://firebasestorage.googleapis.com/v0/b/fire-api-b166b.appspot.com/o/show.mp4?alt=media&token=4e589182-9ec8-4e8f-80b1-afb5d602aee8"
               type="video/mp4"
             />
           </video>
