@@ -135,6 +135,7 @@ table th {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
   .mess {
     position: relative;
     width: 60rem;
@@ -146,6 +147,9 @@ table th {
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
     .close {
       position: absolute;
       top: 0;
