@@ -6,9 +6,11 @@ import { MdClose } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.scss";
 import DonateBtn from "../donateBtn/DonateBtn";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
+  const { status } = useSession();
   return (
     <div className="nav-wrapper">
       <div className="container">
@@ -36,9 +38,25 @@ const Navbar = () => {
             </div>
           </div>
           <div className="right">
-            <div className="item">
-              <Link href="/login">Login</Link>
-            </div>
+            {status === "authenticated" && (
+              <>
+                <div className="item">
+                  <Link href="/login">Dashboard</Link>
+                </div>
+                <div
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="item"
+                >
+                  <Link href="/login">Logout</Link>
+                </div>
+              </>
+            )}
+            {status === "unauthenticated" && (
+              <div className="item">
+                <Link href="/login">Login</Link>
+              </div>
+            )}
+
             <DonateBtn />
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { joiResolver } from "@hookform/resolvers/joi";
 import Joi from "joi";
+import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
 
 const schema = Joi.object({
@@ -23,14 +24,26 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<FormData>({ resolver: joiResolver(schema) });
   return (
-    <form onSubmit={handleSubmit((data) => console.log(data))}>
+    <form
+      onSubmit={handleSubmit((data) =>
+        signIn("credentials", {
+          email: data.email,
+          password: data.password,
+          callbackUrl: "/admin",
+        })
+      )}
+    >
       <div className="f-g">
         <div>
           <input {...register("email")} type="email" placeholder="Email" />
           {errors.email && <p className="error"> {errors.email.message} </p>}
         </div>
         <div>
-          <input {...register("password")} type="text" placeholder="Name" />
+          <input
+            {...register("password")}
+            type="password"
+            placeholder="Password"
+          />
           {errors.password && (
             <p className="error"> {errors.password.message} </p>
           )}

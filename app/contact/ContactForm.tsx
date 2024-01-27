@@ -1,8 +1,11 @@
 "use client";
 
 import { joiResolver } from "@hookform/resolvers/joi";
+import axios from "axios";
 import Joi from "joi";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const schema = Joi.object({
   name: Joi.string().required(),
@@ -23,13 +26,30 @@ interface FormData {
 }
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>({ resolver: joiResolver(schema) });
   return (
-    <form onSubmit={handleSubmit((data) => console.log(data))}>
+    <form
+      onSubmit={handleSubmit((data) => {
+        setLoading(true);
+        axios
+          .post("/api/messages", data)
+          .then(() => {
+            reset();
+            setLoading(false);
+            toast.success("Message sent successfully.");
+          })
+          .catch((err) => {
+            setLoading(false);
+            toast.success("Something went wrong!");
+          });
+      })}
+    >
       <div className="f-g">
         <div>
           <input {...register("name")} type="text" placeholder="Name" />
@@ -59,7 +79,7 @@ const ContactForm = () => {
         rows={10}
       />
       {errors.message && <p className="error"> {errors.message.message} </p>}
-      <button>Send a message</button>
+      <button> {loading ? "Loading..." : "Send a message"} </button>
     </form>
   );
 };
