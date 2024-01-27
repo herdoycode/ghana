@@ -13,9 +13,8 @@ const GalleryPage = ({ children }: Props) => {
   const currentPath = usePathname();
 
   const projectsLink = [
-    { id: 1, path: "/gallery", label: "Ghana" },
-    { id: 2, path: "/gallery/winston", label: "Winston-Salem" },
-    { id: 3, path: "/gallery/africa", label: "West-Africa" },
+    { id: 2, path: "/gallery/winston", label: "Winston-Salem, NC" },
+    { id: 3, path: "/gallery", label: "Ghana,  West Africa" },
   ];
 
   return (
