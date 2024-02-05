@@ -8,7 +8,6 @@ import Navbar from "./components/navbar/Navbar";
 import Topbar from "./components/topbar/Topbar";
 import "./globals.css";
 import Head from "next/head";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1721215320733062"
           crossOrigin="anonymous"
-        />
+        ></script>
       </Head>
 
       <body className={inter.className}>
