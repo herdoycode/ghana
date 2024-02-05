@@ -7,7 +7,6 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Topbar from "./components/topbar/Topbar";
 import "./globals.css";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,18 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1721215320733062"
-          crossOrigin="anonymous"
-        ></script>
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-1721215320733062"
-        ></meta>
-      </Head>
-
       <body className={inter.className}>
         <AuthProvider>
           <Topbar />
