@@ -27,7 +27,8 @@ export default function RootLayout({
       <Head>
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-7335C4Y82J"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7425158339246931"
+          crossOrigin="anonymous"
         ></script>
       </Head>
       <body className={inter.className}>
