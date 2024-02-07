@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { toast } from "react-toastify";
-import "./page.scss";
 
 const Messages = () => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -18,7 +17,7 @@ const Messages = () => {
   }, []);
 
   return (
-    <div className="admin">
+    <div>
       {vM && (
         <div className="message-prev">
           <div className="mess">

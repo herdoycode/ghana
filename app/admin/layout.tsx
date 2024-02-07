@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Sidebar from "./Sidebar";
+import "./page.scss";
 
 interface Porps {
   children: ReactNode;
@@ -11,7 +12,9 @@ const layout = ({ children }: Porps) => {
       <div className="left">
         <Sidebar />
       </div>
-      <div className="right">{children}</div>
+      <div className="right">
+        <div className="admin">{children}</div>
+      </div>
     </div>
   );
 };
