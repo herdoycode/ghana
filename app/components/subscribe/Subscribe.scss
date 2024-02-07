@@ -1,0 +1,38 @@
+.subscribe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15rem 2rem;
+  background: var(--primary-color);
+  .subscribe {
+    background: var(--bg-primary);
+    gap: 1rem;
+    border-radius: 5rem;
+    width: 60rem;
+    padding: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .subscribe-input {
+      gap: 2rem;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      input {
+        border-radius: 3rem;
+        background: var(--bg-secondary);
+        border: none;
+        outline: none;
+        padding: 1.3rem;
+      }
+      button {
+        background: var(--primary-color);
+        color: #fff;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

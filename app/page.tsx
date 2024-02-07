@@ -7,6 +7,7 @@ import Tastimonial from "./components/testimonial/Tastimonial";
 import Video from "./components/video/Video";
 import "./page.scss";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Subscribe from "./components/subscribe/Subscribe";
 
 const page = () => {
   return (
@@ -39,6 +40,8 @@ const page = () => {
         <Tastimonial />
 
         <Video />
+
+        <Subscribe />
 
         <div className="need-wrapper">
           <div className="container">
