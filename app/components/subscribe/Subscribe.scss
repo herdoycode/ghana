@@ -15,20 +15,22 @@
     justify-content: center;
     flex-direction: column;
     .subscribe-input {
-      gap: 2rem;
-      display: flex;
-      align-items: center;
-      margin-top: 1rem;
-      input {
-        border-radius: 3rem;
-        background: var(--bg-secondary);
-        border: none;
-        outline: none;
-        padding: 1.3rem;
-      }
-      button {
-        background: var(--primary-color);
-        color: #fff;
+      form {
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        input {
+          border-radius: 3rem;
+          background: var(--bg-secondary);
+          border: none;
+          outline: none;
+          padding: 1.3rem;
+        }
+        button {
+          background: var(--primary-color);
+          color: #fff;
+        }
       }
     }
     @media screen and (max-width: 768px) {
