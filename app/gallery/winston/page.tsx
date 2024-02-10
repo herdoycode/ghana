@@ -1,11 +1,8 @@
-"use client";
-import { useState } from "react";
-import { FiEye } from "react-icons/fi";
-import { IoClose } from "react-icons/io5";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Flex, Grid } from "@radix-ui/themes";
+import Image from "next/image";
 
 const Winston = () => {
-  const [mImg, setMImg] = useState<string>("/w/g-1.jpg");
-  const [isV, setV] = useState<boolean>(false);
   const gs = [
     { id: 1, url: "/w/g-1.jpg" },
     { id: 2, url: "/w/g-2.jpg" },
@@ -18,43 +15,32 @@ const Winston = () => {
   ];
   return (
     <div className="gallery-wrapper">
-      <div className="container">
-        <div className="video">
-          <video controls>
-            <source
-              src="https://firebasestorage.googleapis.com/v0/b/fire-api-b166b.appspot.com/o/ghana.mp4?alt=media&token=cb1d8153-22e3-49fe-b7c2-008702eb2180"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-      {isV && (
-        <div className="img-prev">
-          <div className="img">
-            <img src={mImg} alt="modal img" />
-            <div onClick={() => setV(!isV)} className="m-close">
-              <IoClose />
-            </div>
-          </div>
-        </div>
-      )}
+      <Flex align="center" justify="center" py="8">
+        <video controls>
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/fire-api-b166b.appspot.com/o/ghana.mp4?alt=media&token=cb1d8153-22e3-49fe-b7c2-008702eb2180"
+            type="video/mp4"
+          />
+        </video>
+      </Flex>
 
-      <div className="g-main">
+      <Grid
+        columns={{ initial: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
+        gap="5"
+      >
         {gs.map((i) => (
           <div key={i.id} className="g-item">
-            <img src={i.url} alt="g-item" />
-            <div
-              onClick={() => {
-                setMImg(i.url);
-                setV(true);
-              }}
-              className="hover"
-            >
-              <FiEye />
-            </div>
+            <Dialog>
+              <DialogTrigger>
+                <Image width={600} height={400} src={i.url} alt="g-item" />
+              </DialogTrigger>
+              <DialogContent>
+                <Image width={600} height={400} src={i.url} alt="g-item" />
+              </DialogContent>
+            </Dialog>
           </div>
         ))}
-      </div>
+      </Grid>
     </div>
   );
 };

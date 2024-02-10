@@ -1,6 +1,6 @@
+import { Grid } from "@radix-ui/themes";
 import { ReactNode } from "react";
 import Sidebar from "./Sidebar";
-import "./page.scss";
 
 interface Porps {
   children: ReactNode;
@@ -8,14 +8,14 @@ interface Porps {
 
 const layout = ({ children }: Porps) => {
   return (
-    <div className="admin-layout">
-      <div className="left">
+    <Grid columns="300px 1fr" px="2" py="8">
+      <div className="bg-secondary px-2 py-4">
         <Sidebar />
       </div>
-      <div className="right">
+      <div className="px-2 py-4">
         <div className="admin">{children}</div>
       </div>
-    </div>
+    </Grid>
   );
 };
 

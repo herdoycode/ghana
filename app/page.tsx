@@ -1,68 +1,66 @@
-import Head from "next/head";
-import Goal from "./components/goal/Goal";
-import Help from "./components/help/Help";
-import ProfileCard from "./components/profileCard/ProfileCard";
-import Slider from "./components/slider/Slider";
-import Tastimonial from "./components/testimonial/Tastimonial";
-import Video from "./components/video/Video";
-import "./page.scss";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import Subscribe from "./components/subscribe/Subscribe";
+import { Container, Flex, Heading } from "@radix-ui/themes";
+import Image from "next/image";
+import Donors from "../components/Donors";
+import Goal from "../components/Goal";
+import Help from "../components/Help";
+import Slider from "../components/Slider";
+import Subscribe from "../components/Subscribe";
+import Tastimonial from "../components/Tastimonial";
+import Video from "../components/Video";
 
 const page = () => {
   return (
-    <>
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-7335C4Y82J"
-        ></script>
-      </Head>
-      <div>
-        <Slider />
-        <Goal />
-        <div className="save">
-          <div className="container">
-            <div className="content">
-              <p>We&apos;re here to support underserved communities.</p>
-              <h2>Fundraising for the people and causes you care about</h2>
-            </div>
+    <div>
+      <Slider />
+      <Goal />
+      <div className="px-2 bg-slate-400 bg-1">
+        <Flex align="center" justify="center" className="h-[400px]">
+          <div className="text-center z-10">
+            <p>We&apos;re here to support underserved communities.</p>
+            <Heading as="h2" size="8">
+              Fundraising for the people and causes you care about
+            </Heading>
           </div>
-        </div>
-
-        <Help />
-
-        <div className="donor">
-          <h2>Our Main Donors</h2>
-          <ProfileCard />
-        </div>
-
-        <Tastimonial />
-
-        <Video />
-
-        <Subscribe />
-
-        <div className="need-wrapper">
-          <div className="container">
-            <div className="need">
-              <div className="n-left">
-                <div className="content">
-                  <h2>
-                    Congratulations on claiming your nonprofit&apos;s Candid
-                    profile!
-                  </h2>
-                </div>
-              </div>
-              <div className="n-right">
-                <img src="/shape-4.png" alt="Shape" />
-              </div>
-            </div>
-          </div>
-        </div>
+        </Flex>
       </div>
-      <GoogleAnalytics gaId="G-7335C4Y82J" />
-    </>
+
+      <Help />
+      <Donors />
+      <Tastimonial />
+      <Video />
+      <Subscribe />
+
+      <div className="py-16 px-2">
+        <Container>
+          <Flex
+            align="center"
+            justify="between"
+            direction={{ initial: "column", md: "row" }}
+            gap={{ initial: "8", md: "0" }}
+          >
+            <div className="flex-1">
+              <Heading
+                as="h2"
+                size="8"
+                align={{ initial: "center", md: "left" }}
+              >
+                Congratulations on claiming your nonprofit&apos;s Candid
+                profile!
+              </Heading>
+            </div>
+            <Flex align="center" justify="end" className="flex-1">
+              <Image
+                src="/shape-4.png"
+                width={500}
+                height={300}
+                className="w-[300px]"
+                alt="Shape"
+              />
+            </Flex>
+          </Flex>
+        </Container>
+      </div>
+    </div>
   );
 };
 

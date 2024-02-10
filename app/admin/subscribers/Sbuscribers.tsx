@@ -1,46 +1,38 @@
-"use client";
-import { Subscriber } from "@prisma/client";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import prisma from "@/prisma/client";
+import { Button, Table } from "@radix-ui/themes";
 
-const Subscribers = () => {
-  const [subscribers, setSubscribers] = useState<Subscriber[]>([]);
-
-  useEffect(() => {
-    axios.get("/api/subscribe").then((res) => setSubscribers(res.data));
-  }, []);
+const Subscribers = async () => {
+  const subscribers = await prisma.subscriber.findMany();
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Subscribers</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        {subscribers.map((subscriber) => (
-          <tr key={subscriber.id}>
-            <td> {subscriber.email} </td>
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.ColumnHeaderCell>Email</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>View</Table.ColumnHeaderCell>
+          <Table.ColumnHeaderCell>Delete</Table.ColumnHeaderCell>
+        </Table.Row>
+      </Table.Header>
 
-            <td>
-              <button
-                onClick={() =>
-                  axios.delete(`/api/subscribe/${subscriber.id}`).then(() => {
-                    toast.warning("Message Deleted!");
-                    setTimeout(() => window.location.reload(), 2000);
-                  })
-                }
-                className="btn-delete"
-              >
-                Delete
-              </button>
-            </td>
-          </tr>
+      <Table.Body>
+        {subscribers.map((s) => (
+          <Table.Row key={s.id}>
+            <Table.Cell> {s.email} </Table.Cell>
+
+            <Table.Cell>
+              <Button variant="outline" size="2">
+                View
+              </Button>
+            </Table.Cell>
+            <Table.Cell>
+              <Button variant="outline" size="2" color="red">
+                View
+              </Button>
+            </Table.Cell>
+          </Table.Row>
         ))}
-      </tbody>
-    </table>
+      </Table.Body>
+    </Table.Root>
   );
 };
 

@@ -1,22 +1,19 @@
-import { getServerSession } from "next-auth";
+import { Box, Container, Flex, Heading } from "@radix-ui/themes";
 import LoginForm from "./LoginForm";
-import "./page.scss";
-import authOptions from "../api/auth/authOptions";
-import { redirect } from "next/navigation";
 
-const LoginPage = async () => {
-  const session = await getServerSession(authOptions);
-
-  if (session) return redirect("/admin");
-
+const LoginPage = () => {
   return (
-    <div className="login-wrapper">
-      <div className="container">
-        <div className="login">
-          <h1>Login</h1>
-          <LoginForm />
-        </div>
-      </div>
+    <div className="px-2">
+      <Container>
+        <Flex align="center" justify="center" className="py-52">
+          <Box className="w-full md:w-[400px]">
+            <Heading as="h1" size="7" mb="4" align="center">
+              Login
+            </Heading>
+            <LoginForm />
+          </Box>
+        </Flex>
+      </Container>
     </div>
   );
 };

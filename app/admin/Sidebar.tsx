@@ -1,21 +1,26 @@
-"use client";
-import { useSession } from "next-auth/react";
-import Image from "next/image";
+import { Avatar, Flex, Heading } from "@radix-ui/themes";
 import Link from "next/link";
 
 const Sidebar = () => {
-  const { data } = useSession();
   return (
     <>
-      <div className="auth">
-        <Image width="60" height="60" src={data?.user?.image!} alt="user" />
-        <h2> {data?.user?.name} </h2>
+      <Flex align="center" justify="center" direction="column" gap="2">
+        <Avatar size="6" radius="full" src="/t3.jpg" fallback="user" />
+        <Heading as="h3" size="4">
+          {" "}
+          Gright Kavi{" "}
+        </Heading>
         <p>Admin role</p>
-      </div>
-      <div className="menu">
-        <Link href="/admin">Messages</Link>
-        <Link href="/admin/subscribers">Subscribers</Link>
-      </div>
+      </Flex>
+      <ul className="space-y-3 mt-3">
+        <li>
+          <Link href="/admin">Messages</Link>
+        </li>
+
+        <li>
+          <Link href="/admin/subscribers">Subscribers</Link>
+        </li>
+      </ul>
     </>
   );
 };

@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { joiResolver } from "@hookform/resolvers/joi";
 import Joi from "joi";
 import { signIn } from "next-auth/react";
@@ -23,34 +25,35 @@ const LoginForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({ resolver: joiResolver(schema) });
+
+  const onSubmit = handleSubmit((data) =>
+    signIn("credentials", {
+      email: data.email,
+      password: data.password,
+      callbackUrl: "/admin",
+    })
+  );
+
   return (
-    <form
-      onSubmit={handleSubmit((data) =>
-        signIn("credentials", {
-          email: data.email,
-          password: data.password,
-          callbackUrl: "/admin",
-        })
-      )}
-    >
-      <div className="f-g">
-        <div>
-          <input {...register("email")} type="email" placeholder="Email" />
-          {errors.email && <p className="error"> {errors.email.message} </p>}
-        </div>
-        <div>
-          <input
-            {...register("password")}
-            type="password"
-            placeholder="Password"
-          />
-          {errors.password && (
-            <p className="error"> {errors.password.message} </p>
-          )}
-        </div>
+    <form onSubmit={onSubmit} className="space-y-3">
+      <div>
+        <Input {...register("email")} type="email" placeholder="Email" />
+        {errors.email && (
+          <p className="text-red-600"> {errors.email.message} </p>
+        )}
+      </div>
+      <div>
+        <Input
+          {...register("password")}
+          type="password"
+          placeholder="Password"
+        />
+        {errors.password && (
+          <p className="text-red-600"> {errors.password.message} </p>
+        )}
       </div>
 
-      <button>Send a message</button>
+      <Button className="w-full">Login</Button>
     </form>
   );
 };

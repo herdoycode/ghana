@@ -1,8 +1,11 @@
+import { Heading } from "@radix-ui/themes";
 import Subscribers from "./Sbuscribers";
 const Admin = () => {
   return (
     <div>
-      <h2 style={{ marginBottom: "2rem" }}>Subscribers</h2>
+      <Heading as="h1" size="7" mb="2">
+        Subscriber
+      </Heading>
       <Subscribers />
     </div>
   );

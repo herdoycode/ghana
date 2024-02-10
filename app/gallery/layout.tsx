@@ -1,42 +1,39 @@
-"use client";
-
+import { Button } from "@/components/ui/button";
+import { Container, Flex, Heading } from "@radix-ui/themes";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
-import "./layout.scss";
 
 interface Props {
   children: ReactNode;
 }
 
 const GalleryPage = ({ children }: Props) => {
-  const currentPath = usePathname();
-
   const projectsLink = [
     { id: 2, path: "/gallery/winston", label: "Winston-Salem, NC" },
     { id: 3, path: "/gallery", label: "Ghana,  West Africa" },
   ];
 
   return (
-    <div className="gallery-wrapper">
-      <div className="g-top">
-        <h1>Gallery</h1>
-        <p>Charity activities are taking place around the world.</p>
+    <Container>
+      <div className="text-center">
+        <Heading as="h1" size="8" mb="3">
+          Gallery
+        </Heading>
+        <p className="mb-2">
+          Charity activities are taking place around the world.
+        </p>
       </div>
-      <div className="projects">
+      <Flex align="center" justify="center" gap="3">
         {projectsLink.map((p) => (
           <Link key={p.id} href={p.path}>
-            <button
-              key={p.id}
-              className={currentPath === p.path ? "btn active" : "btn"}
-            >
+            <Button variant="outline" key={p.id}>
               {p.label}
-            </button>
+            </Button>
           </Link>
         ))}
-      </div>
-      <div className="g-main">{children}</div>
-    </div>
+      </Flex>
+      <div className="mt-8">{children}</div>
+    </Container>
   );
 };
 

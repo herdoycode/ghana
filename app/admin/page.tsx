@@ -1,9 +1,12 @@
+import { Heading } from "@radix-ui/themes";
 import Messages from "./Messages";
 
 const Admin = () => {
   return (
     <div>
-      <h2 style={{ marginBottom: "2rem" }}>Messages</h2>
+      <Heading as="h1" size="7" mb="2">
+        Messages
+      </Heading>
       <Messages />
     </div>
   );

@@ -1,22 +1,17 @@
+import { Button } from "@/components/ui/button";
+import { Container, Flex, Heading } from "@radix-ui/themes";
+import Image from "next/image";
 import Link from "next/link";
 import { MdCheckCircle } from "react-icons/md";
-import Slider from "../components/slider/Slider";
-import "./page.scss";
-import Head from "next/head";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 const AboutPage = () => {
   return (
-    <>
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-7335C4Y82J"
-        ></script>
-      </Head>
-      <div className="about-wrapper">
-        <div className="ab-top">
-          <h1>About us</h1>
+    <div>
+      <Container className="text-center py-8">
+        <Heading as="h1" size="8" mb="4">
+          About us
+        </Heading>
+        <div className="space-y-3 mb-6">
           <p>
             Growing up, Bright always knew his mother was a generous and
             compassionate person. But when she asked him to help pay tuition for
@@ -83,25 +78,34 @@ const AboutPage = () => {
             you can create something special&lsquo; Brianca and Bright
           </p>
         </div>
-        <div className="container">
-          <div className="ab-main">
-            <div className="ab-left">
-              <Slider />
-              <div className="ab-lb">
+      </Container>
+      <div className="bg-slate-200">
+        <Container>
+          <Flex align="center" justify="between" py="9" gap="6">
+            <Flex direction="column" className="flex-1" gap="2">
+              <Image
+                src="/bg-1.jpg"
+                width={800}
+                height={300}
+                alt="about image"
+              />
+              <Flex align="center" justify="between">
                 <Link href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f">
-                  <button>
+                  <Button>
                     <MdCheckCircle /> Donate to Underprivileged
-                  </button>
+                  </Button>
                 </Link>
                 <Link href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f">
-                  <button>
+                  <Button>
                     <MdCheckCircle /> Donate for Education
-                  </button>
+                  </Button>
                 </Link>
-              </div>
-            </div>
-            <div className="ab-rigtht">
-              <h2>We believe we can touch many lives.</h2>
+              </Flex>
+            </Flex>
+            <div className="flex-1 p-4 text-left">
+              <Heading as="h2" size="7">
+                We believe we can touch many lives.
+              </Heading>
               <p>
                 At Bridge in the Gap, we recognize the immense value that
                 education holds as a transformative force, capable of shaping
@@ -123,11 +127,10 @@ const AboutPage = () => {
                 who are going to replicate the compassion shown to them.
               </p>
             </div>
-          </div>
-        </div>
+          </Flex>
+        </Container>
       </div>
-      <GoogleAnalytics gaId="G-7335C4Y82J" />
-    </>
+    </div>
   );
 };
 
