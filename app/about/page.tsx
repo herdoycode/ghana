@@ -81,7 +81,13 @@ const AboutPage = () => {
       </Container>
       <div className="bg-slate-200 dark:bg-secondary">
         <Container>
-          <Flex align="center" justify="between" py="9" gap="6">
+          <Flex
+            align="center"
+            justify="between"
+            py="9"
+            gap="6"
+            direction={{ initial: "column", md: "row" }}
+          >
             <Flex direction="column" className="flex-1" gap="2">
               <Image
                 src="/bg-1.jpg"
