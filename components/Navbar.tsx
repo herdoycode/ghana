@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import DonateButton from "./DonateButton";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   return (
@@ -79,6 +80,7 @@ const Navbar = () => {
               <Link href="/login">Login</Link>
             </div>
             <DonateButton />
+            <ThemeSwitch />
           </div>
         </Flex>
       </Container>

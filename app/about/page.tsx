@@ -79,7 +79,7 @@ const AboutPage = () => {
           </p>
         </div>
       </Container>
-      <div className="bg-slate-200">
+      <div className="bg-slate-200 dark:bg-secondary">
         <Container>
           <Flex align="center" justify="between" py="9" gap="6">
             <Flex direction="column" className="flex-1" gap="2">

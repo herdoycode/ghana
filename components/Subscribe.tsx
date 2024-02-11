@@ -35,7 +35,7 @@ const Subscribe = () => {
           align="center"
           justify="center"
           direction="column"
-          className="w-full md:w-[600px] bg-white p-5 rounded-lg"
+          className="w-full md:w-[600px] bg-white dark:bg-[#000] p-5 rounded-lg"
           gap="3"
         >
           {errors.email && <p className="error"> {errors.email.message} </p>}

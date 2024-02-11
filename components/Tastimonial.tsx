@@ -55,7 +55,11 @@ const Tastimonial = () => {
         </Flex>
         <Grid columns={{ initial: "1fr", sm: "1fr 1fr" }} gap="6">
           {tt.map((i) => (
-            <Flex gap="3" key={i.id} className="bg-white p-3 rounded-lg">
+            <Flex
+              gap="3"
+              key={i.id}
+              className="bg-white dark:bg-[#000] p-3 rounded-lg"
+            >
               <div className="t-img">
                 <Avatar
                   size="4"

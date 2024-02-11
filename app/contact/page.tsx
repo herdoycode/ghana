@@ -43,7 +43,7 @@ const ContactPage = () => {
             {items.map((i) => (
               <Box
                 key={i.id}
-                className="bg-white flex flex-col items-center py-6 rounded-lg"
+                className="bg-white dark:bg-[#000] flex flex-col items-center py-6 rounded-lg"
               >
                 <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center">
                   {i.icon}

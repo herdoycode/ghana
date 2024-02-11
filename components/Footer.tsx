@@ -5,13 +5,12 @@ import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
 import { MdMail } from "react-icons/md";
-import { Button } from "./ui/button";
 import DonateButton from "./DonateButton";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-primary text-white px-2">
+      <div className="bg-black dark:bg-secondary text-zinc-200 px-2">
         <Container>
           <Grid
             columns={{ initial: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr 1fr" }}

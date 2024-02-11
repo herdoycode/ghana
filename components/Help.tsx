@@ -53,7 +53,7 @@ const Help = () => {
               <Flex
                 key={i.id}
                 align="center"
-                className="flex-1 bg-white p-3"
+                className="flex-1 bg-white dark:bg-[#000] p-3"
                 justify="center"
                 direction="column"
                 gap="2"
