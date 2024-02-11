@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io";
 import { MdMail } from "react-icons/md";
 import { Button } from "./ui/button";
+import DonateButton from "./DonateButton";
 
 const Footer = () => {
   return (
@@ -57,14 +58,7 @@ const Footer = () => {
               </ul>
             </div>
             <Flex align="center" justify="start">
-              <Button variant="secondary">
-                <Link
-                  href="https://www.zeffy.com/en-US/donation-form/aa13ac2d-07c5-42fd-8f8c-aba90133e72f"
-                  target="blank"
-                >
-                  Donate Now
-                </Link>
-              </Button>
+              <DonateButton />
             </Flex>
           </Grid>
         </Container>
