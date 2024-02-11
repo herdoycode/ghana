@@ -14,7 +14,7 @@ const GalleryPage = ({ children }: Props) => {
   ];
 
   return (
-    <Container>
+    <Container py="6">
       <div className="text-center">
         <Heading as="h1" size="8" mb="3">
           Gallery

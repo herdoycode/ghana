@@ -62,7 +62,7 @@ const Footer = () => {
           </Grid>
         </Container>
       </div>
-      <div className="bg-green-800 py-2 text-white">
+      <div className="bg-primary py-2 text-white">
         <Container>
           <Flex align="center" justify="between">
             <Text as="p" size="1">
