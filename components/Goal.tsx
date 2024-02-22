@@ -18,7 +18,7 @@ const Goal = () => {
                 height={400}
                 className="w-auto"
                 src="/goal2.jpg"
-                alt="education image"
+                alt="Children going to school"
               />
             </div>
           </Flex>
