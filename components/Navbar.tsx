@@ -1,6 +1,6 @@
 "use client";
 import { Box, Container, Flex } from "@radix-ui/themes";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
@@ -17,6 +17,7 @@ import DonateButton from "./DonateButton";
 import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
+  const { data } = useSession();
   return (
     <Box py="2" className="border-b">
       <Container>
@@ -66,7 +67,7 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className="flex items-center gap-4">
-            {false && (
+            {data?.user ? (
               <>
                 <div>
                   <Link href="/admin">Dashboard</Link>
@@ -75,10 +76,10 @@ const Navbar = () => {
                   <Link href="/login">Logout</Link>
                 </div>
               </>
-            )}
-            <div>
+            ) : (
               <Link href="/login">Login</Link>
-            </div>
+            )}
+
             <DonateButton />
             <ThemeSwitch />
           </div>

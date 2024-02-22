@@ -38,7 +38,9 @@ const Subscribe = () => {
           className="w-full md:w-[600px] bg-white dark:bg-[#000] p-5 rounded-lg"
           gap="3"
         >
-          {errors.email && <p className="error"> {errors.email.message} </p>}
+          {errors.email && (
+            <p className="text-red-500"> {errors.email.message} </p>
+          )}
           <Image src="/envelope.png" width="120" height="120" alt="mail-icon" />
           <Heading as="h2" size="6">
             SUBSCRIBE

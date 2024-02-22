@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const Winston = () => {
   const gs = [
-    { id: 1, url: "/w/g-1.jpg" },
-    { id: 2, url: "/w/g-2.jpg" },
-    { id: 3, url: "/w/g-3.jpg" },
-    { id: 4, url: "/w/g-4.jpg" },
-    { id: 5, url: "/w/g-5.jpg" },
-    { id: 6, url: "/w/g-6.jpg" },
-    { id: 7, url: "/w/g-7.jpg" },
-    { id: 8, url: "/w/g-8.jpg" },
+    { id: 1, url: "/w/g-1.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 2, url: "/w/g-2.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 3, url: "/w/g-3.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 4, url: "/w/g-4.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 5, url: "/w/g-5.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 6, url: "/w/g-6.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 7, url: "/w/g-7.jpg", alt: "Project image in Winston-Salem, NC" },
+    { id: 8, url: "/w/g-8.jpg", alt: "Project image in Winston-Salem, NC" },
   ];
   return (
     <div className="gallery-wrapper">
@@ -32,10 +32,16 @@ const Winston = () => {
           <div key={i.id} className="g-item">
             <Dialog>
               <DialogTrigger>
-                <Image width={600} height={400} src={i.url} alt="g-item" />
+                <Image
+                  width={600}
+                  height={400}
+                  className="h-[250px] object-cover"
+                  src={i.url}
+                  alt={i.alt}
+                />
               </DialogTrigger>
               <DialogContent>
-                <Image width={600} height={400} src={i.url} alt="g-item" />
+                <Image width={600} height={400} src={i.url} alt={i.alt} />
               </DialogContent>
             </Dialog>
           </div>
