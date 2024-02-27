@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Flex, Grid } from "@radix-ui/themes";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const Winston = () => {
@@ -49,6 +50,13 @@ const Winston = () => {
       </Grid>
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "A journey through our Wiston Salem Gallery.",
+  description:
+    "Experience the artistic soul of Winston-Salem at our gallery, showcasing a diverse array of local and regional artists. From the beautiful donation photos all over the city to the wonderful people.",
+  keywords: "Beyond the classroom Horizons, Food Security",
 };
 
 export default Winston;

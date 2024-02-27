@@ -1,6 +1,7 @@
 import { Flex, Grid } from "@radix-ui/themes";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Metadata } from "next";
 
 const Ghana = () => {
   const gs = [
@@ -50,6 +51,13 @@ const Ghana = () => {
       </Grid>
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "A journey through our Ghana, West-Africa Gallery",
+  description:
+    "Bridge in the Gap's West Africa Gallery features a stunning collection of artworks that celebrate the region's rich cultural heritage and creative expression. Explore vibrant textiles, bold sculptures, and evocative paintings that convey the beauty, resilience, and spirit of the West African community.",
+  keywords: "West-Africa, Ghana, Volta Region, Sokode, Back to school drive",
 };
 
 export default Ghana;

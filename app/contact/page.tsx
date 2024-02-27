@@ -3,6 +3,7 @@ import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import ContactForm from "./ContactForm";
+import { Metadata } from "next";
 
 const items = [
   {
@@ -85,6 +86,13 @@ const ContactPage = () => {
       </Box>
     </div>
   );
+};
+
+export const metadata: Metadata = {
+  title: "Contacts to Bridge in the Gap Worldwide.",
+  description:
+    "Reach out to Bridge in the Gap Worldwide and connect with us! Share your questions, comments, or partnership ideas and we'll respond promptly. Let's work together to bridge the gap and create a brighter future for all.",
+  keywords: "Brianca, Sitsofe, Generations",
 };
 
 export default ContactPage;
