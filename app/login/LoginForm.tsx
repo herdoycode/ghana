@@ -37,10 +37,16 @@ const LoginForm = () => {
 
   return (
     <>
-      <Button className="w-full bg-green-500 mb-4 hover:bg-green-600">
+      <Button
+        onClick={() => signIn("google")}
+        className="w-full bg-green-500 mb-4 hover:bg-green-600"
+      >
         <BsGoogle className="me-2" /> Continue with google
       </Button>
-      <Button className="w-full bg-blue-500 hover:bg-blue-600">
+      <Button
+        onClick={() => signIn("facebook")}
+        className="w-full bg-blue-500 hover:bg-blue-600"
+      >
         <BsFacebook className="me-2" /> Continue with Facebook
       </Button>
 
