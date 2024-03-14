@@ -11,7 +11,7 @@ const LoginPage = async () => {
   return (
     <div className="px-2">
       <Container>
-        <Flex align="center" justify="center" className="py-52">
+        <Flex align="center" justify="center" className="py-10">
           <Box className="w-full md:w-[400px]">
             <Heading as="h1" size="7" mb="4" align="center">
               Login

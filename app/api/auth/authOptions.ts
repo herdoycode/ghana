@@ -1,7 +1,8 @@
+import prisma from "@/prisma/client";
 import bcrypt from "bcrypt";
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import prisma from "@/prisma/client";
+import GoogleProvider from "next-auth/providers/google";
 
 const authOptions: NextAuthOptions = {
   providers: [
@@ -37,6 +38,10 @@ const authOptions: NextAuthOptions = {
           return null;
         }
       },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   session: {
