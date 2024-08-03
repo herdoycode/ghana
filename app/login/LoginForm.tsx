@@ -28,11 +28,7 @@ const LoginForm = () => {
   } = useForm<FormData>({ resolver: joiResolver(schema) });
 
   const onSubmit = handleSubmit((data) =>
-    signIn("credentials", {
-      email: data.email,
-      password: data.password,
-      callbackUrl: "/admin",
-    })
+    console.log(data)
   );
 
   return (
