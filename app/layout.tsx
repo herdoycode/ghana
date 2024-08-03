@@ -26,6 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4928930579006434"
+     crossOrigin="anonymous"></script>
+      </head>
       <body className={inter.className}>
         <AuthProvider>
           <ThemeProvider
