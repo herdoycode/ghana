@@ -13,6 +13,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Good
+
 export const metadata: Metadata = {
   title: "Bridge in the Gap Worldwide",
   description:
