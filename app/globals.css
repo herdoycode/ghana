@@ -77,3 +77,7 @@
 button {
   cursor: pointer !important;
 }
+
+img{
+  width: 100% !important;
+}

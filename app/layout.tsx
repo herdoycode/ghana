@@ -5,10 +5,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Topbar from "../components/Topbar";
+// import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
+// import Topbar from "../components/Topbar";
 import "./globals.css";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,10 +41,19 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Theme>
-            <Topbar />
+            <div className="h-screen flex items-center justify-center">
+              <Image
+                src="/under.png"
+                width={1920}
+                height={1080}
+                alt="under constraction"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            {/* <Topbar />
             <Navbar />
             {children}
-            <Footer />
+            <Footer /> */}
           </Theme>
         </ThemeProvider>
 
