@@ -1,9 +1,10 @@
+import { Hero } from "@/components/hero";
 import { Box, Container, Flex, Grid, Heading, Text } from "@radix-ui/themes";
+import { Metadata } from "next";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
-import ContactForm from "./ContactForm";
-import { Metadata } from "next";
+import ContactForm from "./contact-form";
 
 const items = [
   {
@@ -27,12 +28,18 @@ const items = [
 ];
 
 const ContactPage = () => {
+  const images = [
+    { id: 1, image: "/slider/1.jpg" },
+    { id: 2, image: "/slider/2.jpg" },
+    { id: 3, image: "/slider/3.jpg" },
+  ];
   return (
-    <div className="px-2">
-      <Box className="bg-secondary" py="7">
-        <Container>
+    <>
+      <Hero images={images} />
+      <div className="px-3 bg-secondary">
+        <Container className="py-28">
           <Box className="text-center space-y-2 mb-8">
-            <Heading as="h1" size="8">
+            <Heading as="h1" size="8" className="text-primary">
               Contact Us
             </Heading>
             <Text as="p" size="5" align="center">
@@ -57,34 +64,33 @@ const ContactPage = () => {
             ))}
           </Grid>
         </Container>
-      </Box>
-      <Box className="py-10">
-        <Container>
-          <Flex
-            align="center"
-            justify="between"
-            direction={{ initial: "column", md: "row" }}
-            gap={{ initial: "6", md: "0" }}
-          >
-            <div className="flex-1">
-              <Heading as="h2" size="8" mb="4">
-                We&apos;d Love to hear from you
-              </Heading>
-              <Text as="p">
-                We are thrilled that you&apos;re interested in connecting with
-                Bridge In The Gap. Whether you have a question, want to learn
-                more about our programs, or simply want to join hands in making
-                a difference, we are here to listen and engage. Feel free to
-                reach out to us using any of the following methods:
-              </Text>
-            </div>
-            <div className="flex-1">
-              <ContactForm />
-            </div>
-          </Flex>
-        </Container>
-      </Box>
-    </div>
+      </div>
+
+      <Container className="py-10">
+        <Flex
+          align="center"
+          justify="between"
+          direction={{ initial: "column", md: "row" }}
+          gap={{ initial: "6", md: "0" }}
+        >
+          <div className="flex-1">
+            <Heading className="text-primary" as="h2" size="8" mb="4">
+              We&apos;d Love to hear from you
+            </Heading>
+            <Text as="p">
+              We are thrilled that you&apos;re interested in connecting with
+              Bridge In The Gap. Whether you have a question, want to learn more
+              about our programs, or simply want to join hands in making a
+              difference, we are here to listen and engage. Feel free to reach
+              out to us using any of the following methods:
+            </Text>
+          </div>
+          <div className="flex-1">
+            <ContactForm />
+          </div>
+        </Flex>
+      </Container>
+    </>
   );
 };
 

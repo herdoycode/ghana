@@ -1,16 +1,16 @@
-import { ThemeProvider } from "@/components/ThemeProvider";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Topbar from "../components/Topbar";
+import { Jost } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Bridge in the Gap Worldwide",
@@ -24,30 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4928930579006434"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Theme>
-            <Topbar />
+    <html lang="en">
+      <body className={`${jost.variable} antialiased`}>
+        <Theme>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
             <Navbar />
             {children}
             <Footer />
-          </Theme>
-        </ThemeProvider>
-
-        <ToastContainer />
+          </ThemeProvider>
+        </Theme>
       </body>
     </html>
   );

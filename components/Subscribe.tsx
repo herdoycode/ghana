@@ -1,33 +1,35 @@
 "use client";
-import { joiResolver } from "@hookform/resolvers/joi";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Flex, Heading, Text } from "@radix-ui/themes";
-import axios from "axios";
-import Joi from "joi";
-import Image from "next/image";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { LuMailOpen } from "react-icons/lu";
+import { z } from "zod";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-const schema = Joi.object({
-  email: Joi.string()
-    .email({ tlds: { allow: false } })
-    .required(),
+const FormSchema = z.object({
+  email: z.string().email("Invalid email format"),
 });
 
-interface FormData {
-  email: string;
-}
-
 const Subscribe = () => {
-  const [loading, setLoading] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<FormData>({ resolver: joiResolver(schema) });
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      email: "",
+    },
+  });
+
+  function onSubmit(data: z.infer<typeof FormSchema>) {
+    console.log(data);
+  }
+
   return (
     <div className="py-16 bg-secondary px-2">
       <Flex align="center" justify="center">
@@ -35,45 +37,37 @@ const Subscribe = () => {
           align="center"
           justify="center"
           direction="column"
-          className="w-full md:w-[600px] bg-white dark:bg-[#000] p-5 rounded-lg"
+          className="w-full md:w-[600px] bg-white dark:bg-[#000] shadow-2xl px-5 py-10 rounded-lg"
           gap="3"
         >
-          {errors.email && (
-            <p className="text-red-500"> {errors.email.message} </p>
-          )}
-          <Image src="/envelope.png" width="120" height="120" alt="mail-icon" />
+          <LuMailOpen className="text-primary text-[300px]" />
           <Heading as="h2" size="6">
             SUBSCRIBE
           </Heading>
           <Text as="p">Subscribe to our newsletter & stay updated</Text>
-          <form
-            className="w-full space-y-3"
-            onSubmit={handleSubmit((data) => {
-              setLoading(true);
-              axios
-                .post("/api/subscribe", data)
-                .then(() => {
-                  reset();
-                  setLoading(false);
-                  toast.success("Subscribed.");
-                })
-                .catch((err) => {
-                  setLoading(false);
-                  toast.success("Something went wrong!");
-                });
-            })}
-          >
-            <div>
-              <Input
-                {...register("email")}
-                type="text"
-                placeholder="Your Email"
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="w-full space-y-4"
+            >
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input type="email" placeholder="Email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <Button className="w-full" disabled={loading}>
-              {loading ? "Loading..." : "Submit"}
-            </Button>
-          </form>
+
+              <Button className="w-full py-6" type="submit">
+                Submit
+              </Button>
+            </form>
+          </Form>
         </Flex>
       </Flex>
     </div>

@@ -1,78 +1,66 @@
-"use client";
-import { Box, Container, Flex } from "@radix-ui/themes";
-import Image from "next/image";
-import Link from "next/link";
-import { MdMenu } from "react-icons/md";
-
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import DonateButton from "./DonateButton";
-import ThemeSwitch from "./ThemeSwitch";
+import { Container, Flex } from "@radix-ui/themes";
+import { AlignJustify } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
+import { Button } from "./ui/button";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <Box py="2" className="border-b">
-      <Container>
+    <div className="bg-primary text-white py-2">
+      <Container className="px-3">
         <Flex align="center" justify="between">
-          <nav className="flex items-center gap-4">
+          <Flex align="center" gap="8">
             <Link href="/">
-              <Image width={50} height={50} src="/logo.png" alt="logo" />
+              <Image src="/logo.png" width={65} height={65} alt="Logo" />
             </Link>
+            <ul className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.link}> {item.label} </Link>
+                </li>
+              ))}
+            </ul>
+          </Flex>
+          <Flex align="center" gap="3">
             <div className="block md:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="text-2xl">
-                    <MdMenu />
+                  <Button
+                    variant="outline"
+                    className="text-black dark:text-white"
+                  >
+                    <AlignJustify />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-screen">
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                      <Link href="/">Home</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="/about">About</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="/gallery">Gallery</Link>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Link href="/contact">Contact</Link>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
+                <DropdownMenuContent className="w-56">
+                  {navItems.map((item) => (
+                    <Link key={item.id} href={item.link}>
+                      <DropdownMenuItem> {item.label} </DropdownMenuItem>
+                    </Link>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-            <ul className="hidden gap-4 md:flex">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <div>
-                <Link href="/about">About</Link>
-              </div>
-              <div>
-                <Link href="/gallery">Gallery</Link>
-              </div>
-              <div>
-                <Link href="/contact">Contact</Link>
-              </div>
-            </ul>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/login">Login</Link>
-            <DonateButton />
-            <ThemeSwitch />
-          </div>
+            <ThemeToggle />
+          </Flex>
         </Flex>
       </Container>
-    </Box>
+    </div>
   );
-};
+}
 
-export default Navbar;
+export const navItems = [
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "About", link: "/about" },
+  { id: 3, label: "Programs", link: "/programs" },
+  { id: 4, label: "Events", link: "/events" },
+  { id: 5, label: "Gallery", link: "/gallery" },
+  { id: 6, label: "Contact", link: "/contact" },
+];

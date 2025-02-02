@@ -1,19 +1,14 @@
-import { Metadata } from "next";
-import Ghana from "./ghana/page";
+import { Hero } from "@/components/hero";
 
-const Gallery = () => {
+export default function Gallery() {
+  const images = [
+    { id: 1, image: "/slider/1.jpg" },
+    { id: 2, image: "/slider/2.jpg" },
+    { id: 3, image: "/slider/3.jpg" },
+  ];
   return (
-    <div>
-      <Ghana />
-    </div>
+    <>
+      <Hero images={images} />
+    </>
   );
-};
-
-export const metadata: Metadata = {
-  title: "A journey through our Wiston Salem Gallery.",
-  description:
-    "Experience the artistic soul of Winston-Salem at our gallery, showcasing a diverse array of local and regional artists. From the beautiful donation photos all over the city to the wonderful people.",
-  keywords: "Beyond the classroom Horizons, Food Security",
-};
-
-export default Gallery;
+}

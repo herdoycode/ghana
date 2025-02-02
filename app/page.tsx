@@ -1,69 +1,43 @@
-import { Container, Flex, Heading } from "@radix-ui/themes";
+import Achievement from "@/components/achievement";
+import Donors from "@/components/donors";
+import Goal from "@/components/goal";
+import Help from "@/components/help";
+import { Hero } from "@/components/hero";
+import Subscribe from "@/components/subscribe";
+import Tastimonial from "@/components/tastimonial";
+import { Flex, Heading } from "@radix-ui/themes";
 import { Metadata } from "next";
-import Image from "next/image";
-import Donors from "../components/Donors";
-import Goal from "../components/Goal";
-import Help from "../components/Help";
-import Slider from "../components/Slider";
-import Subscribe from "../components/Subscribe";
-import Tastimonial from "../components/Tastimonial";
-import Video from "../components/Video";
 
-const page = () => {
+export default function Home() {
+  const images = [
+    { id: 1, image: "/slider/1.jpg" },
+    { id: 2, image: "/slider/2.jpg" },
+    { id: 3, image: "/slider/3.jpg" },
+  ];
   return (
-    <div>
-      <Slider />
+    <>
+      <Hero images={images} />
       <Goal />
       <div className="px-2 bg-slate-400 bg-1">
         <Flex align="center" justify="center" className="h-[400px]">
           <div className="text-center z-10">
-            <p>We&apos;re here to support underserved communities.</p>
-            <Heading as="h2" size="8">
+            <p className="text-2xl">
+              We&apos;re here to support underserved communities.
+            </p>
+            <Heading as="h2" size="8" className="text-5xl font-semibold">
               Fundraising for the people and causes you care about
             </Heading>
           </div>
         </Flex>
       </div>
-
       <Help />
       <Donors />
       <Tastimonial />
-      <Video />
+      <Achievement />
       <Subscribe />
-
-      <div className="py-16 px-2">
-        <Container>
-          <Flex
-            align="center"
-            justify="between"
-            direction={{ initial: "column", md: "row" }}
-            gap={{ initial: "8", md: "0" }}
-          >
-            <div className="flex-1">
-              <Heading
-                as="h2"
-                size="8"
-                align={{ initial: "center", md: "left" }}
-              >
-                Congratulations on claiming your nonprofit&apos;s Candid
-                profile!
-              </Heading>
-            </div>
-            <Flex align="center" justify="end" className="flex-1">
-              <Image
-                src="/shape-4.png"
-                width={500}
-                height={300}
-                className="w-[300px]"
-                alt="Shape"
-              />
-            </Flex>
-          </Flex>
-        </Container>
-      </div>
-    </div>
+    </>
   );
-};
+}
 
 export const metadata: Metadata = {
   title: "Bridge in the Gap Worldwide",
@@ -72,5 +46,3 @@ export const metadata: Metadata = {
   keywords:
     "Education, Food Security, Scholarships for disadvantaged kids, Tools for Tomorrow, Empower Her Project, Tools for Tomorrow Initiative, Beyound classrom Horizons",
 };
-
-export default page;

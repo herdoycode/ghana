@@ -1,96 +1,78 @@
-import { Container, Flex, Grid, Heading, Text } from "@radix-ui/themes";
-import Image from "next/image";
+import { Container, Flex } from "@radix-ui/themes";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
-import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-import { IoLogoLinkedin } from "react-icons/io";
-import { MdMail } from "react-icons/md";
-import DonateButton from "./DonateButton";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer>
-      <div className="bg-black dark:bg-secondary text-zinc-200 px-2">
-        <Container>
-          <Grid
-            columns={{ initial: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr 1fr" }}
-            py="9"
-            gap="6"
-          >
+    <div className="py-6 px-3 bg-gray-800 text-white mt-10">
+      <Container>
+        <Flex
+          align={{ initial: "start", md: "center" }}
+          justify="between"
+          direction={{ initial: "column", md: "row" }}
+          gap={{ initial: "8", md: "0" }}
+        >
+          <div className="space-y-3">
+            <h2 className="text-2xl font-semibold">Contact</h2>
             <div className="space-y-3">
-              <Image src="/logo.png" width="100" height="100" alt="logo" />
-              <p>Winston-Salem, North Carolina.</p>
+              <Flex align="center" gap="2">
+                <Phone /> <span>743-213-4065</span>
+              </Flex>
+              <Flex align="center" gap="2">
+                <Mail /> <span>bridgeinthegap23@gmail.com</span>
+              </Flex>
             </div>
-            <div className="space-y-2">
-              <Heading as="h3" size="4">
-                Quick Links
-              </Heading>
-              <ul className="space-y-1">
-                <li>
-                  <Link href="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/contact">Contact Us</Link>
-                </li>
-                <li>
-                  <Link href="/gallery">Gallery</Link>
-                </li>
-              </ul>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-2xl font-semibold">Quick Links</h2>
+            <div className="flex flex-col gap-2">
+              <Link href="/about">About</Link>
+              <Link href="/programs">Programs</Link>
+              <Link href="/events">Events</Link>
+              <Link href="/contact">Contact</Link>
             </div>
-            <div className="space-y-2">
-              <Heading as="h3" size="4">
-                Contact
-              </Heading>
-              <ul className="space-y-1">
-                <Flex align="center" gap="2">
-                  <div className="icon">
-                    <FaPhoneAlt />
-                  </div>
-                  <p className="text">743-213-4065</p>
+          </div>
+          <Flex
+            align="center"
+            justify="center"
+            direction="column"
+            gap="4"
+            className="w-full md:w-auto"
+          >
+            <h2 className="text-2xl font-semibold">Follow Us</h2>
+            <Flex align="center" justify="center" gap="4">
+              <Link href="https://www.facebook.com/bridgeinthegapworldwide?mibextid=ZbWKwL">
+                <Flex
+                  align="center"
+                  justify="center"
+                  className="w-12 h-12 rounded-full bg-primary shadow hover:shadow-white transition-all cursor-pointer"
+                >
+                  <FaFacebook className="text-2xl" />
                 </Flex>
-                <Flex align="center" gap="2">
-                  <div className="icon">
-                    <MdMail />
-                  </div>
-                  <p className="text">bridgeinthegap23@gmail.com</p>
+              </Link>
+              <Link href="https://www.instagram.com/bridgeinthegap23?igsh=ZHp6ZmdxdTlseHdj">
+                <Flex
+                  align="center"
+                  justify="center"
+                  className="w-12 h-12 rounded-full bg-primary shadow hover:shadow-white transition-all cursor-pointer"
+                >
+                  <FaInstagram className="text-2xl" />
                 </Flex>
-              </ul>
-            </div>
-            <Flex align="center" justify="start">
-              <DonateButton />
+              </Link>
+              <Link href="https://www.linkedin.com/company/bridge-in-the-gap-worldwide">
+                <Flex
+                  align="center"
+                  justify="center"
+                  className="w-12 h-12 rounded-full bg-primary shadow hover:shadow-white transition-all cursor-pointer"
+                >
+                  <FaLinkedin className="text-2xl" />
+                </Flex>
+              </Link>
             </Flex>
-          </Grid>
-        </Container>
-      </div>
-      <div className="bg-primary py-2 text-white">
-        <Container>
-          <Flex align="center" justify="between">
-            <Text as="p" size="1">
-              &copy; 2023 Copyrights by Bridge in the Gap. All Rights Reserved
-            </Text>
-
-            <ul className="flex items-center gap-3">
-              <li>
-                <Link href="https://www.facebook.com/bridgeinthegapworldwide?mibextid=ZbWKwL">
-                  <FaFacebookF />
-                </Link>
-              </li>
-              <li>
-                <Link href="https://www.instagram.com/bridgeinthegap23?igsh=ZHp6ZmdxdTlseHdj">
-                  <FaInstagram />
-                </Link>
-              </li>
-              <li>
-                <Link href="https://www.linkedin.com/company/bridge-in-the-gap-worldwide">
-                  <IoLogoLinkedin />
-                </Link>
-              </li>
-            </ul>
           </Flex>
-        </Container>
-      </div>
-    </footer>
+        </Flex>
+      </Container>
+    </div>
   );
-};
-
-export default Footer;
+}

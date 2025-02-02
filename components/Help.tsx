@@ -35,9 +35,9 @@ const Help = () => {
             gap="2"
             py="9"
           >
-            <Heading as="h2" size="7">
+            <h1 className="text-3xl text-primary md:text-4xl font-semibold">
               We&apos;re here to help others
-            </Heading>
+            </h1>
             <p className="w-full md:max-w-[600px] text-center">
               Our mission is to provide equitable access to quality education,
               empower marginalized individuals and create an inclusive and
@@ -59,7 +59,7 @@ const Help = () => {
                 gap="2"
               >
                 {i.icon}
-                <Heading as="h3" size="4">
+                <Heading as="h3" size="4" className="text-primary">
                   {i.title}
                 </Heading>
                 <p className="text-center">{i.text}</p>

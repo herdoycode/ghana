@@ -5,27 +5,27 @@ const Tastimonial = () => {
   const tt = [
     {
       id: 1,
-      img: "/t1.jpg",
+      img: "/tastimonials/t1.jpg",
       quote:
         "These testimonials are a testament to the incredible impact Bridge In The Gap has on the lives of those they support. Through education and empowerment, they are turning dreams into reality and lighting up the path to a brighter future",
       name: "Brianca Adams",
     },
     {
       id: 2,
-      img: "/t2.jpg",
+      img: "/tastimonials/t2.jpg",
       quote: "Marvelously helping the less privileged, God bless them.🙏",
       name: "Jessica Addo",
     },
     {
       id: 3,
-      img: "/t3.jpg",
+      img: "/tastimonials/t3.jpg",
       quote:
         "They were lights in the lives of students in Ghana. they gave many stationaries. it was touching.",
       name: "Sitsofe Kodzo",
     },
     {
       id: 4,
-      img: "/t4.webp",
+      img: "/tastimonials/t4.webp",
       quote: "Doing amazing work in the community.",
       name: "Francisca Amorni",
     },
@@ -42,9 +42,9 @@ const Tastimonial = () => {
             gap="2"
             className="w-full md:w-[600px] mb-6"
           >
-            <Heading as="h2" size="7">
+            <h1 className="text-3xl text-primary md:text-4xl font-semibold">
               What they&apos;re saying about us
-            </Heading>
+            </h1>
             <Text align="center">
               These testimonials are a testament to the incredible impact Bridge
               In The Gap has on the lives of those they support. Through
@@ -79,7 +79,7 @@ const Tastimonial = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <Heading as="h3" size="4">
+                  <Heading as="h3" size="4" className="text-primary">
                     {i.name}
                   </Heading>
                   <p className="text-zinc-400">Donatee</p>
