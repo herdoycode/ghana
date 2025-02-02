@@ -30,7 +30,7 @@ export function Hero({ images }: Props) {
                 width={1920}
                 height={1080}
                 alt={"slider" + slider.id}
-                className="h-[80dvh] object-cover"
+                className="h-auto md:h-[80dvh] object-cover"
               />
             </CarouselItem>
           ))}
