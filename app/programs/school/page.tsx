@@ -8,10 +8,10 @@ const g1 = [
   { id: 4, src: "/programs/school/4.jpg", alt: "School" },
 ];
 const g2 = [
-  { id: 1, src: "/programs/women/1.jpg", alt: "Women Empowerment" },
-  { id: 2, src: "/programs/women/2.jpg", alt: "Women Empowerment" },
-  { id: 3, src: "/programs/women/s1.webp", alt: "Women Empowerment" },
-  { id: 4, src: "/programs/women/s2.webp", alt: "Women Empowerment" },
+  { id: 1, src: "/programs/school/5.jpg", alt: "School" },
+  { id: 2, src: "/programs/school/6.jpg", alt: "School" },
+  { id: 3, src: "/programs/school/7.jpg", alt: "School" },
+  { id: 4, src: "/programs/school/8.jpg", alt: "School" },
 ];
 const g3 = [
   { id: 1, src: "/programs/school/11.jpg", alt: "School" },
@@ -20,10 +20,13 @@ const g3 = [
   { id: 4, src: "/programs/school/14.jpg", alt: "School" },
 ];
 
-export default function Gallery() {
+export default function BackToSchool() {
   return (
     <Container className="px-3">
-      <Grid columns={{ initial: "1", md: "3" }} gap="5" my="9">
+      <h1 className="text-4xl font-semibold text-primary my-10">
+        Women Empowerment
+      </h1>
+      <Grid columns={{ initial: "1", md: "3" }} gap="5">
         <div className="flex flex-col gap-6">
           {g1.map((i) => (
             <Image

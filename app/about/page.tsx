@@ -1,5 +1,5 @@
-import Card from "@/components/card";
 import { Hero } from "@/components/hero";
+import Sidebar from "@/components/sidebar";
 import { Container, Grid } from "@radix-ui/themes";
 import { Metadata } from "next";
 
@@ -82,19 +82,7 @@ export default function About() {
               can create something special Brianca and Bright
             </p>
           </div>
-          <div className="md:border-l p-4 space-y-6">
-            <h1 className="text-3xl">Our Programs</h1>
-            <Card
-              image="/womenem/1.webp"
-              title="Women Empowerment 2024"
-              caption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-            />
-            <Card
-              image="/womenem/2.webp"
-              title="Back To School 2024"
-              caption="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-            />
-          </div>
+          <Sidebar />
         </Grid>
       </Container>
     </>

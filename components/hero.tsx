@@ -48,7 +48,7 @@ export function Hero({ images }: Props) {
           >
             <Button
               variant="outline"
-              className="bg-transparent py-4 md:py-7 px-6 md:px-10 border-white border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
+              className="bg-transparent py-6 md:py-7 px-6 md:px-10 border-white border md:border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
             >
               Donate
             </Button>
@@ -56,7 +56,7 @@ export function Hero({ images }: Props) {
           <Link href="/">
             <Button
               variant="outline"
-              className="bg-transparent py-4 md:py-7 px-6 md:px-10 border-white border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
+              className="bg-transparent py-6 md:py-7 px-6 md:px-10 border-white border md:border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
             >
               Programs
             </Button>
@@ -64,7 +64,7 @@ export function Hero({ images }: Props) {
           <Link href="/">
             <Button
               variant="outline"
-              className="bg-transparent py-4 md:py-7 px-6 md:px-10 border-white border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
+              className="bg-transparent py-6 md:py-7 px-6 md:px-10 border-white border md:border-2 text-white hover:bg-white text-xl font-normal hover:text-black"
             >
               Events
             </Button>
