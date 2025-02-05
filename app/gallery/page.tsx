@@ -15,9 +15,9 @@ const g2 = [
 ];
 const g3 = [
   { id: 1, src: "/programs/school/11.jpg", alt: "School" },
-  { id: 2, src: "/programs/school/12.jpg", alt: "School" },
+  { id: 2, src: "/programs/meals/2.jpg", alt: "School" },
   { id: 3, src: "/programs/school/13.jpg", alt: "School" },
-  { id: 4, src: "/programs/school/14.jpg", alt: "School" },
+  { id: 4, src: "/programs/meals/1.jpg", alt: "School" },
 ];
 
 export default function Gallery() {

@@ -24,7 +24,7 @@ export default function BackToSchool() {
   return (
     <Container className="px-3">
       <h1 className="text-4xl font-semibold text-primary my-10">
-        Women Empowerment
+        Back To School 2025
       </h1>
       <Grid columns={{ initial: "1", md: "3" }} gap="5">
         <div className="flex flex-col gap-6">

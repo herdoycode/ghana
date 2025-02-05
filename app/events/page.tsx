@@ -4,9 +4,9 @@ import { Container, Grid } from "@radix-ui/themes";
 
 const Events = () => {
   const images = [
-    { id: 1, image: "/womenem/s1.webp" },
-    { id: 2, image: "/womenem/s2.webp" },
-    { id: 3, image: "/womenem/s1.webp" },
+    { id: 1, image: "/programs/women/1.jpg" },
+    { id: 2, image: "/programs/meals/1.jpg" },
+    { id: 3, image: "/programs/school/1.jpg" },
   ];
   return (
     <>
@@ -17,9 +17,7 @@ const Events = () => {
           gap={{ initial: "8", md: "3" }}
         >
           <div className="space-y-4">
-            <h1 className="text-4xl font-semibold text-primary">
-              Lorem ipsum dolor sit.
-            </h1>
+            <h1 className="text-4xl font-semibold text-primary">Our Events</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab velit
               reprehenderit rem dolor nisi alias iste tenetur culpa molestias

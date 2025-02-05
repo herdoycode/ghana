@@ -15,7 +15,7 @@ const Programs = () => {
         <Grid columns={{ initial: "1fr", md: "1fr 400px" }}>
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold text-primary">
-              Lorem ipsum dolor sit.
+              Our Programs
             </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab velit
