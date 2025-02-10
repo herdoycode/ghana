@@ -10,9 +10,11 @@ import { Metadata } from "next";
 
 export default function Home() {
   const images = [
-    { id: 1, image: "/slider/1.jpg" },
-    { id: 2, image: "/slider/2.jpg" },
-    { id: 3, image: "/slider/3.jpg" },
+    { id: 1, image: "/slider/s1.jpg" },
+    { id: 2, image: "/slider/s2.jpg" },
+    { id: 3, image: "/slider/1.jpg" },
+    { id: 4, image: "/slider/2.jpg" },
+    { id: 5, image: "/slider/3.jpg" },
   ];
   return (
     <>

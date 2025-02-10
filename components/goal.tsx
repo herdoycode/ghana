@@ -23,7 +23,7 @@ export default function Goal() {
             <h1 className="text-3xl text-primary md:text-4xl font-semibold">
               Our goal is to help people
             </h1>
-            <p className="text-xl leading-8">
+            <p className="text-xl leading-8 text-justify">
               Bridge in the Gap is a nonprofit organization with a profound
               commitment to transforming lives through education. We firmly
               believe that education is not only a fundamental right but also a

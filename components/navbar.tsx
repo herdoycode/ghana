@@ -34,6 +34,7 @@ export default function Navbar() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
+                    size='icon'
                     className="text-black dark:text-white"
                   >
                     <AlignJustify />
